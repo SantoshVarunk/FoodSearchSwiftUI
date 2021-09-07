@@ -1,0 +1,11 @@
+//
+//  FoodSearch.xcconfig
+//  foodSearch
+//
+//  Created by Santosh Karnati on 01/09/21.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+SLASH = /
+CONTENT_API_BASE_URL = https:$(SLASH)/api.yelp.com

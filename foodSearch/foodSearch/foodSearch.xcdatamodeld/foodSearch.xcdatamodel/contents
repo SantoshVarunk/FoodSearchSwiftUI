@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20F71" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="BusinessDetails" representedClassName="BusinessDetails" syncable="YES">
+        <attribute name="businessId" optional="YES" attributeType="String"/>
+        <attribute name="image_url" optional="YES" attributeType="String"/>
+        <attribute name="is_closed" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="rating" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="location" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="LocationDetails" inverseName="businessDetails" inverseEntity="LocationDetails"/>
+    </entity>
+    <entity name="LocationDetails" representedClassName="LocationDetails" syncable="YES">
+        <attribute name="address1" optional="YES" attributeType="String"/>
+        <attribute name="city" optional="YES" attributeType="String"/>
+        <attribute name="country" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="state" optional="YES" attributeType="String"/>
+        <attribute name="zip_code" optional="YES" attributeType="String"/>
+        <relationship name="businessDetails" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BusinessDetails" inverseName="location" inverseEntity="BusinessDetails"/>
+    </entity>
+    <elements>
+        <element name="BusinessDetails" positionX="-63" positionY="-9" width="128" height="119"/>
+        <element name="LocationDetails" positionX="-54" positionY="27" width="128" height="134"/>
+    </elements>
+</model>
