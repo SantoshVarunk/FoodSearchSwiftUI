@@ -30,10 +30,11 @@ struct SearchView: View {
                 
                 ForEach(business, id:\.self){searchText in
                     LazyHStack{
-                        VStack{
-                            Image(systemName: "heart.fill").data(url: URL(string: searchText.image_url ?? "")!).scaledToFill()
+                        if let imageData = searchText.imageData {
+                            Image(uiImage: UIImage(data: imageData)!)
+                                .resizable().scaledToFit()
+                                .frame(width: 50, height: 50)
                         }
-                        .frame(width: 50, height: 50)
                         Text(searchText.name)
                             .padding(.leading)
                     }

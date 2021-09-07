@@ -19,10 +19,11 @@ struct RestaurantListView: View {
                                 .foregroundColor(.white)
                                 .padding(.leading, 20.0)
                                 .frame(maxWidth: .infinity, minHeight: 100.0)
-                                .background(Color.red)
+                                .background(Color.red).cornerRadius(20).shadow(color: .black, radius: 10, x: 0.0, y: 7.0)
                         }
                     }
                 }
+                .padding(.horizontal, 30.0)
             }
         }.navigationTitle("Restaurant List")
     }
